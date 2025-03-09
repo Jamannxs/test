@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet } from "react-native";
-import { MaterialIcons } from 'react-native-vector-icons';
 
 const App = () => {
   const [task, setTask] = useState("");
@@ -20,7 +19,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>To-Do List</Text>
+      <Text style={styles.header}>🍎 To-Do List 🍏</Text>
       
       <FlatList
         data={tasks}
@@ -28,7 +27,7 @@ const App = () => {
           <View style={styles.taskContainer}>
             <Text style={styles.taskText}>{item}</Text>
             <TouchableOpacity onPress={() => removeTask(index)}>
-              <MaterialIcons name="delete" size={24} color="red" />
+              🗑️
             </TouchableOpacity>
           </View>
         )}
@@ -38,7 +37,7 @@ const App = () => {
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
-          placeholder="Enter a task..."
+          placeholder="Enter your todos..."
           value={task}
           onChangeText={setTask}
         />
